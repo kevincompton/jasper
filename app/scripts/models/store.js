@@ -13,6 +13,13 @@ define([
         },
 
         defaults: {
+            name: 'Robins Brothers',
+            address: '12345 Robin st.',
+            city: 'Los Angeles',
+            state: 'Ca',
+            zip: '90039',
+            phone: '55512345678',
+            website: 'http://google.com'
         },
 
         validate: function(attrs, options) {

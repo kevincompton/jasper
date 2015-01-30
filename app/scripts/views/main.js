@@ -4,8 +4,9 @@ define([
     'jquery',
     'underscore',
     'marionette',
-    'templates'
-], function($, _, Marionette, JST) {
+    'templates',
+    'views/stores',
+], function($, _, Marionette, JST, StoresView) {
     'use strict';
 
     var MainView = Marionette.LayoutView.extend({
@@ -13,7 +14,7 @@ define([
 
         tagName: 'div',
 
-        id: 'jasper-briefcase',
+        id: '',
 
         className: '',
 
@@ -25,13 +26,11 @@ define([
         },
 
         initialize: function () {
-            this.listenTo(this.model, 'change', this.render);
+            MainView.content.show(new StoresView());
         },
 
-        render: function () {
-            this.$el.html(this.template(this.model.toJSON()));
-        }
+        
     });
-
+        
     return MainView;
 });

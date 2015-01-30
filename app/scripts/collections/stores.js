@@ -3,7 +3,7 @@
 define([
     'underscore',
     'backbone',
-    'models/stores'
+    'models/store'
 ], function (_, Backbone, StoresModel) {
     'use strict';
 
