@@ -26,11 +26,11 @@ define([
         },
 
         initialize: function () {
-            MainView.content.show(new StoresView());
+            
         },
 
         
     });
-        
+
     return MainView;
 });

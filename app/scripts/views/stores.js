@@ -6,11 +6,12 @@ define([
     'marionette',
     'templates',
     'collections/stores',
+    'views/store',
     'oven'
-], function($, _, Marionette, JST, StoresCollection, oven) {
+], function($, _, Marionette, JST, StoresCollection, StoreView, oven) {
     'use strict';
 
-    var StoresView = Marionette.CollectionView.extend({
+    var StoresView = Marionette.CompositeView.extend({
         
         template: JST['app/scripts/templates/stores.ejs'],
 
@@ -20,13 +21,21 @@ define([
 
         className: 'stores',
 
+        itemView: StoreView,
+
         events: {},
 
         initialize: function (opts) {
-            this.model = this.model || oven.stores.forceGet(opts.id);
+            
             
         },
 
+        modelChanged: function(model, value){
+        },
+
+        appendHtml: function(StoresView, StoreView){
+            StoresView.$("#content").append(StoreView.el);
+        }
         
     });
 

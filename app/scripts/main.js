@@ -18,17 +18,19 @@ require.config({
 });
 
 require([
+    'app',
     'backbone',
-    'views/main',
-    'routes/main'
-], function(Backbone, MainView, MainRouter) {
-    var mainView = new MainView();
-    var mainRegion = new Backbone.Marionette.Region({
-      el: "#jasper-briefcase"
-    });
-    mainRegion.show(mainView);
-    new MainRouter({
-        mainView: mainView
-    });
+    'models/store'
+], function(app, Backbone, StoreModel) {
+    'use strict';
+
+    var stores = new StoreModel([
+        { name: 'Wet Cat' },
+        { name: 'Bitey Cat' },
+        { name: 'Surprised Cat' }
+    ]);
+
+    app.start();
+
     Backbone.history.start();
 });

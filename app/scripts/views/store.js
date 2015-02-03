@@ -3,19 +3,17 @@
 define([
     'jquery',
     'underscore',
-    'backbone',
+    'marionette',
     'templates'
-], function ($, _, Backbone, JST) {
+], function($, _, Marionette, JST) {
     'use strict';
 
-    var StoreView = Backbone.View.extend({
+    var StoreView = Marionette.ItemView.extend({
         template: JST['app/scripts/templates/store.ejs'],
 
         tagName: 'div',
 
-        id: '',
-
-        className: '',
+        className: 'store',
 
         events: {},
 
