@@ -11,5 +11,7 @@ define([
         model: StoresModel
     });
 
+    
+
     return StoresCollection;
 });

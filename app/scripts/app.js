@@ -1,27 +1,29 @@
 /*global define */
 
 define([
+	'jquery',
+    'underscore',
     'marionette',
+    'views/main',
     'views/stores',
-    'collections/stores'
-], function(Marionette, StoresView, StoresCollection) {
+    'collections/stores',
+    'models/store'
+], function($, _, Marionette, StoresView, StoresCollection, StoreModel, MainView) {
 	'use strict';
 
 	//define the app
 	var app = new Marionette.Application();
 
-
-	// define the app regions
 	app.addRegions({
-        content: '#content'
+		//'appMenu' : '#jasper-menu',
+    	'appRegion' : '#jasper-content'
 	});
+	
+
 
 	app.addInitializer(function (options) {
+
 		
-		var storesView = new StoresView({
-    		collection: StoresCollection
- 		});
-  		app.content.show(storesView);
 
 	});
 

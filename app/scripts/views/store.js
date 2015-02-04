@@ -11,7 +11,7 @@ define([
     var StoreView = Marionette.ItemView.extend({
         template: JST['app/scripts/templates/store.ejs'],
 
-        tagName: 'div',
+        tagName: 'li',
 
         className: 'store',
 
