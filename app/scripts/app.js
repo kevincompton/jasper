@@ -15,8 +15,8 @@ define([
 	var app = new Marionette.Application();
 
 	app.addRegions({
-		//'appMenu' : '#jasper-menu',
-    	'appRegion' : '#jasper-content'
+		appMenu : '#jasper-menu',
+    	appContent : '#jasper-content'
 	});
 	
 

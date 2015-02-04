@@ -5,12 +5,12 @@ define([
     'underscore',
     'marionette',
     'templates',
-    'views/link',
-    'collections/menu'
+    'collections/menu',
+    'views/link'
 ], function($, _, Marionette, JST, MenuCollection, LinkView) {
     'use strict';
 
-    var MenuView = Backbone.Marionette.CollectionView.extend({
+    var MenuView = Marionette.CollectionView.extend({
 
         tagName: 'ul',
 

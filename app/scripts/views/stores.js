@@ -14,9 +14,13 @@ define([
 
         tagName: "ul",
 
-        childView: StoreView
+        childView: StoreView,
+
+        
         
     });
+
+    
 
     return StoresView;
 });

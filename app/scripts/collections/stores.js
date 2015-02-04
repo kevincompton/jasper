@@ -4,11 +4,11 @@ define([
     'underscore',
     'backbone',
     'models/store'
-], function (_, Backbone, StoresModel) {
+], function(_, Backbone, StoreModel) {
     'use strict';
 
     var StoresCollection = Backbone.Collection.extend({
-        model: StoresModel
+        model: StoreModel
     });
 
     

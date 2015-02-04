@@ -17,6 +17,10 @@ define([
 
         events: {},
 
+        initialize: function () {
+            
+        },
+        
        
     });
 
